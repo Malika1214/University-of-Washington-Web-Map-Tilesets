@@ -28,8 +28,7 @@ The study area focuses on the central UW campus near Husky Stadium, including se
   - Provide geographic context
   - Serve as a neutral background for thematic layers
 - **Zoom Levels**: Controlled by Mapbox (default basemap behavior)
-
-📸 *Screenshot:*  
+ 
 ![Tileset 1](assets/screenshots/tileset-1.png)
 
 ---
@@ -44,8 +43,7 @@ The study area focuses on the central UW campus near Husky Stadium, including se
 - **Purpose**:
   - Highlight selected campus buildings as a thematic layer
 - **Zoom Levels**: 11–15
-
-📸 *Screenshot:*  
+ 
 ![Tileset 2](assets/screenshots/tileset-2.png)
 
 ---
@@ -59,8 +57,7 @@ The study area focuses on the central UW campus near Husky Stadium, including se
   - Demonstrate exporting a composite map layer from QGIS
   - Preserve cartographic styling as a static raster tileset
 - **Zoom Levels**: 11–15
-
-📸 *Screenshot:*  
+ 
 ![Tileset 3](assets/screenshots/tileset-3.png)
 
 ---
@@ -76,7 +73,6 @@ The study area focuses on the central UW campus near Husky Stadium, including se
   - Apply visual hierarchy and focus
 - **Zoom Levels**: 11–15
 
-📸 *Screenshot:*  
 ![Tileset 4](assets/screenshots/tileset-4.png)
 
 ---
@@ -99,6 +95,7 @@ The study area focuses on the central UW campus near Husky Stadium, including se
 - **Mapbox Studio** — custom basemap design
 - **Mapbox GL JS** — interactive web map rendering
 - **GitHub Pages** — web hosting
+
 
 
 
