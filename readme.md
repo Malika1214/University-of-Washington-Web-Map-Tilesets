@@ -30,7 +30,7 @@ The study area focuses on the central UW campus near Husky Stadium, including se
 - **Zoom Levels**: Controlled by Mapbox (default basemap behavior)
 
 📸 *Screenshot:*  
-![Tileset 1](screenshots/tileset1_basemap.png)
+![Tileset 1](assets/screenshots/tileset-1.png)
 
 ---
 
@@ -46,7 +46,7 @@ The study area focuses on the central UW campus near Husky Stadium, including se
 - **Zoom Levels**: 11–15
 
 📸 *Screenshot:*  
-![Tileset 2](screenshots/tileset2_buildings.png)
+![Tileset 2](assets/screenshots/tileset-2.png)
 
 ---
 
@@ -61,7 +61,7 @@ The study area focuses on the central UW campus near Husky Stadium, including se
 - **Zoom Levels**: 11–15
 
 📸 *Screenshot:*  
-![Tileset 3](screenshots/tileset3_composite.png)
+![Tileset 3](assets/screenshots/tileset-3.png)
 
 ---
 
@@ -77,7 +77,7 @@ The study area focuses on the central UW campus near Husky Stadium, including se
 - **Zoom Levels**: 11–15
 
 📸 *Screenshot:*  
-![Tileset 4](screenshots/tileset4_theme.png)
+![Tileset 4](assets/screenshots/tileset-4.png)
 
 ---
 
@@ -93,22 +93,6 @@ The study area focuses on the central UW campus near Husky Stadium, including se
 
 ---
 
-## 🗂️ Repository Structure
-
-[your_repository_name]/
-├─ readme.md
-├─ index.html
-└─ assets/
-├─ tileset_2/
-│ └─ {z}/{x}/{y}.png
-├─ tileset_3/
-│ └─ {z}/{x}/{y}.png
-└─ tileset_4/
-└─ {z}/{x}/{y}.png
-
-
----
-
 ## 🛠️ Tools & Technologies Used
 
 - **QGIS** — data digitization, cartographic styling, raster tile export
@@ -118,15 +102,8 @@ The study area focuses on the central UW campus near Husky Stadium, including se
 
 ---
 
-## 📌 Notes
-
-- Export extents and zoom ranges were intentionally limited to avoid excessive tile generation.
-- Raster tiles follow the standard `{z}/{x}/{y}.png` web tile pyramid structure.
-- All map layers were designed with visual hierarchy and cartographic clarity in mind.
-
----
-
 ## 👤 Author
 
 Malaika
+
 
