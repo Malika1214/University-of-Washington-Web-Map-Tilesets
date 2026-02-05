@@ -4,8 +4,6 @@
   <meta charset="utf-8" />
   <title>UW Campus Map Tilesets</title>
   <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
-
-  <!-- Mapbox GL JS -->
   <link
     href="https://api.mapbox.com/mapbox-gl-js/v3.18.1/mapbox-gl.css"
     rel="stylesheet"
@@ -41,11 +39,9 @@ const map = new mapboxgl.Map({
   zoom: 15
 });
 
-// controls
 map.addControl(new mapboxgl.NavigationControl(), 'top-right');
 map.addControl(new mapboxgl.ScaleControl({ maxWidth: 80, unit: 'metric' }));
 
-// helper
 function addRasterTiles(id, folder) {
   map.addSource(id, {
     type: 'raster',
@@ -61,13 +57,11 @@ function addRasterTiles(id, folder) {
   });
 }
 
-// wait until map is READY
 map.on('load', () => {
   addRasterTiles('tileset2', 'assets/tileset_2');
   addRasterTiles('tileset3', 'assets/tileset_3');
   addRasterTiles('tileset4', 'assets/tileset_4');
 
-  // layer switcher
   const layers = ['tileset2', 'tileset3', 'tileset4'];
   const layerMenu = document.createElement('div');
   layerMenu.className = 'mapboxgl-ctrl mapboxgl-ctrl-layers';
@@ -104,3 +98,4 @@ map.on('load', () => {
 
 </body>
 </html>
+
