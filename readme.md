@@ -1,7 +1,7 @@
 # University of Washington Web Map Tilesets (Mapbox GL JS)
 
 ## 🌐 Web Map URL
-https://vipshehbaz.github.io/YOUR_REPOSITORY_NAME
+[https://malika1214.github.io/University-of-Washington-Web-Map-Tilesets/](https://malika1214.github.io/University-of-Washington-Web-Map-Tilesets/)
 
 > This interactive web map visualizes multiple raster tile sets generated in QGIS and rendered using Mapbox GL JS.
 
@@ -95,6 +95,7 @@ The study area focuses on the central UW campus near Husky Stadium, including se
 - **Mapbox Studio** — custom basemap design
 - **Mapbox GL JS** — interactive web map rendering
 - **GitHub Pages** — web hosting
+
 
 
 
