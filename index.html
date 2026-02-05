@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>UW Campus Map Tilesets</title>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+
+  <!-- Mapbox GL JS -->
+  <link
+    href="https://api.mapbox.com/mapbox-gl-js/v3.18.1/mapbox-gl.css"
+    rel="stylesheet"
+  />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.18.1/mapbox-gl.js"></script>
+
+  <style>
+    body { margin: 0; padding: 0; }
+    #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+
+    .mapboxgl-ctrl-layers {
+      background: white;
+      padding: 6px 8px;
+      font-family: sans-serif;
+      font-size: 13px;
+      border-radius: 4px;
+      box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<script>
+mapboxgl.accessToken =
+  'pk.eyJ1Ijoidmlwc2hlaGJheiIsImEiOiJjbWt1eDYzcWQwMGtzM2NxeDN1Z2NuMzZrIn0.UtNx0noYlyAJPAkP1g6x1g';
+
+const map = new mapboxgl.Map({
+  container: 'map',
+  style: 'mapbox://styles/vipshehbaz/cml92nrdn005s01sj1guw6fa8',
+  center: [-122.3035, 47.6553],
+  zoom: 15
+});
+
+// controls
+map.addControl(new mapboxgl.NavigationControl(), 'top-right');
+map.addControl(new mapboxgl.ScaleControl({ maxWidth: 80, unit: 'metric' }));
+
+// helper
+function addRasterTiles(id, folder) {
+  map.addSource(id, {
+    type: 'raster',
+    tiles: [`${folder}/{z}/{x}/{y}.png`],
+    tileSize: 256
+  });
+
+  map.addLayer({
+    id,
+    type: 'raster',
+    source: id,
+    layout: { visibility: 'none' }
+  });
+}
+
+// wait until map is READY
+map.on('load', () => {
+  addRasterTiles('tileset2', 'assets/tileset_2');
+  addRasterTiles('tileset3', 'assets/tileset_3');
+  addRasterTiles('tileset4', 'assets/tileset_4');
+
+  // layer switcher
+  const layers = ['tileset2', 'tileset3', 'tileset4'];
+  const layerMenu = document.createElement('div');
+  layerMenu.className = 'mapboxgl-ctrl mapboxgl-ctrl-layers';
+
+  layers.forEach(id => {
+    const input = document.createElement('input');
+    input.type = 'checkbox';
+    input.id = id;
+
+    input.onchange = e => {
+      map.setLayoutProperty(
+        id,
+        'visibility',
+        e.target.checked ? 'visible' : 'none'
+      );
+    };
+
+    const label = document.createElement('label');
+    label.htmlFor = id;
+    label.style.marginLeft = '4px';
+    label.textContent = id;
+
+    layerMenu.appendChild(input);
+    layerMenu.appendChild(label);
+    layerMenu.appendChild(document.createElement('br'));
+  });
+
+  map.addControl({
+    onAdd() { return layerMenu; },
+    onRemove() { layerMenu.remove(); }
+  }, 'top-left');
+});
+</script>
+
+</body>
+</html>
