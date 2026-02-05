@@ -100,10 +100,5 @@ The study area focuses on the central UW campus near Husky Stadium, including se
 - **Mapbox GL JS** — interactive web map rendering
 - **GitHub Pages** — web hosting
 
----
-
-## 👤 Author
-
-Malaika
 
 
